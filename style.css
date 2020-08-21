@@ -1,0 +1,79 @@
+body {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+form {
+  color: green;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+h4 {
+  color: green;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+#city-input {
+  border-radius: 20px;
+  border: 0;
+  font-size: 15px;
+}
+
+#searchButton {
+  border-radius: 20px;
+  border: 0;
+  font-size: 15px;
+}
+
+#currentButton {
+  border-radius: 20px;
+  border: 0;
+  font-size: 15px;
+}
+
+div.card {
+  margin: 0 auto;
+  text-align: center;
+  border-color: green;
+  font-weight: 400;
+  font-size: 24px;
+  color: green;
+}
+
+.card-body {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+div.card.p {
+  font-weight: 400;
+  font-size: 24px;
+  display: inline-block;
+}
+
+a {
+  color: green;
+}
+
+a:hover {
+  color: rgb(19, 170, 52);
+}
+
+div.days .row .col {
+  display: inline-block;
+  text-align: center;
+  margin: 15px 0 35px 0;
+  font-weight: 400;
+  font-size: 24px;
+  color: green;
+}
+
+div.days .row .windrain {
+  font-size: 20px;
+}
