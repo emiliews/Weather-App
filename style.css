@@ -1,5 +1,5 @@
 .weather-app {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -51,11 +51,13 @@ div.card {
   font-weight: 400;
   font-size: 24px;
   color: green;
+  max-width: 550px;
 }
 
 .card-body {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   border-radius: 10px;
+  padding: 10px;
 }
 
 div.card.p {
