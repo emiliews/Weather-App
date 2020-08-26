@@ -12,138 +12,140 @@
 
 <body>
     <div class="container">
-        <form class="search-form" id="search-form">
-            <input type="search" placeholder="  Enter city" id="city-input" />
-            <button class="btn btn-primary" type="submit" class="search-button" id="searchButton">Search</button>
-            <button class="btn btn-primary" type="submit" class="current-button" id="currentButton">Current
-                city</button>
-        </form>
-        <h1 id="city-header">
+        <div class="weather-app">
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="  Enter city" id="city-input" />
+                <button class="btn btn-primary" type="submit" class="search-button" id="searchButton">Search</button>
+                <button class="btn btn-primary" type="submit" class="current-button" id="currentButton">Current
+                    city</button>
+            </form>
+            <h1 id="city-header">
 
-        </h1>
-        <hr>
-        <div class="card text-center" style="width: 40rem;">
-            <div class="card-body">
-                <h2 class="card-title" id="day">Today</h2>
-                <h4 class="card-title" id="time"> Now </h4>
-                <p class="card-text">
-                    <span id="temp"> 22 </span><span id="tempUnit"> °C </span>
-                    <!-- <span class="units">
-                  <a href="#" id="celsius-link">°C</a> 
-                  <a href="#" id="fahrenheit-link">°F</a> 
-                </span>| -->
-                    &#8287;&#8287;&#8287;&#8287; <span style='font-size:40px;'>&#127781;</span>
-                <div class="row">
-                    <div class="col-4">
-                        <strong> Temperatures </strong>
+            </h1>
+            <hr>
+            <div class="card text-center" style="width: 40rem;">
+                <div class="card-body">
+                    <h2 class="card-title" id="day">Today</h2>
+                    <h4 class="card-title" id="time"> Now </h4>
+                    <p class="card-text">
+                        <span id="temp"> 22 </span><span id="tempUnit"> °C </span>
+                        <!-- <span class="units">
+                    <a href="#" id="celsius-link">°C</a> 
+                    <a href="#" id="fahrenheit-link">°F</a> 
+                    </span>| -->
+                        &#8287;&#8287;&#8287;&#8287; <span style='font-size:40px;'>&#127781;</span>
+                    <div class="row">
+                        <div class="col-4">
+                            <strong> Temperatures </strong>
+                        </div>
+                        <div class="col-4">
+                            <strong> Wind </strong>
+                        </div>
+                        <div class="col-4">
+                            <strong> Precipitation </strong>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <strong> Wind </strong>
-                    </div>
-                    <div class="col-4">
-                        <strong> Precipitation </strong>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <span id="maxTemp"></span> <span>°C</span>/<span id="minTemp"></span><span>°C</span>
-                    </div>
-                    <div class="col-4">
-                        <span id="wind"> </span> <span> m/s</span>
-                    </div>
-                    <div class="col-4">
-                        <span id="precipitation"> 0.0 </span> <span> mm</span>
-                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <span id="maxTemp"></span> <span>°C</span>/<span id="minTemp"></span><span>°C</span>
+                        </div>
+                        <div class="col-4">
+                            <span id="wind"> </span> <span> m/s</span>
+                        </div>
+                        <div class="col-4">
+                            <span id="precipitation"> 0.0 </span> <span> mm</span>
+                        </div>
 
-                </div>
-                </p>
-            </div>
-        </div>
-
-        <div class="days">
-            <div class="row">
-                <div class="col">
-                    <strong> Friday </strong>
-                    <br>
-                    <span style='font-size:45px;'> ⛅ </span>
-                    <br>
-                    24°C
-                    <span class="windrain">
-                        <br>
-                        4 m/s ↘
-                        <br>
-                        0.0 mm
-                    </span>
-                </div>
-                <div class="col">
-                    <strong> Saturday </strong>
-                    <br>
-                    <span style='font-size:45px;'> ⛅ </span>
-                    <br>
-                    23°C
-                    <span class="windrain">
-                        <br>
-                        4 m/s ↙
-                        <br>
-                        0.0 mm
-                    </span>
-                </div>
-                <div class="col">
-                    <strong> Sunday </strong>
-                    <br>
-                    <span style='font-size:45px;'> ☁️ </span>
-                    <br>
-                    21°C
-                    <span class="windrain">
-                        <br>
-                        4 m/s ↗
-                        <br>
-                        0.0 mm
-                    </span>
-                </div>
-                <div class="col">
-                    <strong> Monday </strong>
-                    <br>
-                    <span style='font-size:45px;'> ⛅ </span>
-                    <br>
-                    19°C
-                    <span class="windrain">
-                        <br>
-                        4 m/s →
-                        <br>
-                        0.0 mm
-                    </span>
-                </div>
-                <div class="col">
-                    <strong> Tuesday </strong>
-                    <br>
-                    <span style='font-size:45px;'> 🌤️ </span>
-                    <br>
-                    17°C
-                    <span class="windrain">
-                        <br>
-                        4 m/s ↘
-                        <br>
-                        0.0 mm
-                    </span>
+                    </div>
+                    </p>
                 </div>
             </div>
-        </div>
+
+            <div class="days">
+                <div class="row">
+                    <div class="col">
+                        <strong> Friday </strong>
+                        <br>
+                        <span style='font-size:45px;'> ⛅ </span>
+                        <br>
+                        24°C
+                        <span class="windrain">
+                            <br>
+                            4 m/s ↘
+                            <br>
+                            0.0 mm
+                        </span>
+                    </div>
+                    <div class="col">
+                        <strong> Saturday </strong>
+                        <br>
+                        <span style='font-size:45px;'> ⛅ </span>
+                        <br>
+                        23°C
+                        <span class="windrain">
+                            <br>
+                            4 m/s ↙
+                            <br>
+                            0.0 mm
+                        </span>
+                    </div>
+                    <div class="col">
+                        <strong> Sunday </strong>
+                        <br>
+                        <span style='font-size:45px;'> ☁️ </span>
+                        <br>
+                        21°C
+                        <span class="windrain">
+                            <br>
+                            4 m/s ↗
+                            <br>
+                            0.0 mm
+                        </span>
+                    </div>
+                    <div class="col">
+                        <strong> Monday </strong>
+                        <br>
+                        <span style='font-size:45px;'> ⛅ </span>
+                        <br>
+                        19°C
+                        <span class="windrain">
+                            <br>
+                            4 m/s →
+                            <br>
+                            0.0 mm
+                        </span>
+                    </div>
+                    <div class="col">
+                        <strong> Tuesday </strong>
+                        <br>
+                        <span style='font-size:45px;'> 🌤️ </span>
+                        <br>
+                        17°C
+                        <span class="windrain">
+                            <br>
+                            4 m/s ↘
+                            <br>
+                            0.0 mm
+                        </span>
+                    </div>
+                </div>
+            </div>
 
 
 
-        
-        <div />
-        <p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             <div style="text-align:center">
-            <a href="https://github.com/emiliews/Weather-App" target="_blank">Open source code</a> by Emilie Wolff-Sneedorff
+                <a href="https://github.com/emiliews/Weather-App" target="_blank">Open source code</a> by Emilie Wolff-Sneedorff
             </div>
-        </p>
+            </p>
+        <div />
+    
+    <div/>
     <script src="index.js"></script>
 </body>
 
