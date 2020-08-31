@@ -29,45 +29,6 @@ function formatTime(timestamp) {
   return `${hour}:${minute}`;
 }
 
-//let weather = {
-//  paris: {
-//    temp: 19.7,
-//    humidity: 80
-//  },
-//  tokyo: {
-//    temp: 17.3,
-//    humidity: 50
-//  },
-//  lisbon: {
-//    temp: 30.2,
-//    humidity: 20
-//  },
-//  "san francisco": {
-//    temp: 20.9,
-//    humidity: 100
-//  },
-//  moscow: {
-//    temp: -5,
-//    humidity: 20
-// }
-//};
-
-// let city = prompt("Enter a city");
-// city = city.toLowerCase();
-//if (weather[city] !== undefined) {
-//  let temperature = weather[city].temp;
-//  let humidity = weather[city].humidity;
-//  let temperatureRound = Math.round(temperature);
-
-//  alert(
-//    `It is currently ${temperatureRound}°C in ${city} with a humidity of ${humidity}%`
-//  );
-//} else {
-//  alert(
-//    `Sorry we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-//  );
-//}
-
 function showWeather(response) {
   document.querySelector("#city-header").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -89,14 +50,12 @@ function showWeather(response) {
   );
   //document.querySelector("#day").innerHTML = `${day}`;
 
-  document.querySelector("#time").innerHTML = formatTime(forecast.dt * 1000);
-  //document.querySelector("#time").innerHTML = `${hour}:${minute}`;
+  document.querySelector("#time").innerHTML = `${hour}:${minute}`;
 }
 
 function searchCity(city) {
   let apiKey = "7e2e99ff7bbaffece2246f5b3f04400c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  //let apiUrl = `https://pro.openweathermap.org/data/2.5/forecast/hourly?q=${city}&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
 
