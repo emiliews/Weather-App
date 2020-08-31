@@ -26,8 +26,10 @@ function formatTime(timestamp) {
     minute = `0${minute}`;
   }
 
-  return `${hour}:${minute}`;
+  document.querySelector("#time") = `${hour}:${minute}`;
 }
+
+formatTime();
 
 function showWeather(response) {
   document.querySelector("#city-header").innerHTML = response.data.name;
@@ -50,7 +52,7 @@ function showWeather(response) {
   );
   //document.querySelector("#day").innerHTML = `${day}`;
 
-  document.querySelector("#time").innerHTML = `${hour}:${minute}`;
+  //document.querySelector("#time").innerHTML = formatTime();
 }
 
 function searchCity(city) {
