@@ -12,12 +12,13 @@ function formatDate(timestamp) {
   ];
   let day = days[now.getDay()];
 
-  return `${day}`;
+  return `${day} `;
 }
 
 function formatTime(timestamp) {
   let now = new Date(timestamp);
   let hour = now.getHours();
+
   if (hour < 10) {
     hour = `0${hour}`;
   }
@@ -26,7 +27,8 @@ function formatTime(timestamp) {
     minute = `0${minute}`;
   }
 
-  document.querySelector("#time") = `${hour}:${minute}`;
+  let time = `${hour}:${minute}`;
+  return `${time}`;
 }
 
 formatTime();
@@ -50,9 +52,10 @@ function showWeather(response) {
   document.querySelector("#day").innerHTML = formatDate(
     response.data.dt * 1000
   );
-  //document.querySelector("#day").innerHTML = `${day}`;
 
-  //document.querySelector("#time").innerHTML = formatTime();
+  document.querySelector("#time").innerHTML = formatTime(
+    response.data.dt * 1000
+  );
 }
 
 function searchCity(city) {
