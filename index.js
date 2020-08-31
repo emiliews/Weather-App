@@ -1,9 +1,6 @@
-let now = new Date();
-let day = now.getDay();
-let hour = now.getHours();
-let minute = now.getMinutes();
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
 
-function date() {
   let days = [
     "Sunday",
     "Monday",
@@ -13,19 +10,24 @@ function date() {
     "Friday",
     "Saturday",
   ];
-  let currentDay = days[day];
-  let currentHour = hour;
-  let minutes = minute.toString();
-  let currentMinute = minutes.padStart(2, "0");
+  let day = days[now.getDay()];
 
-  let weekday = document.querySelector("#day");
-  let time = document.querySelector("#time");
-
-  weekday.innerHTML = `${currentDay}`;
-  time.innerHTML = `${currentHour}:${currentMinute}`;
+  return `${day}`;
 }
 
-date();
+function formatTime(timestamp) {
+  let now = new Date(timestamp);
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+
+  return `${hour}:${minute}`;
+}
 
 //let weather = {
 //  paris: {
@@ -81,6 +83,14 @@ function showWeather(response) {
   document.querySelector("#minTemp").innerHTML = Math.round(
     response.data.main.temp_min
   );
+
+  document.querySelector("#day").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
+  //document.querySelector("#day").innerHTML = `${day}`;
+
+  document.querySelector("#time").innerHTML = formatTime(forecast.dt * 1000);
+  //document.querySelector("#time").innerHTML = `${hour}:${minute}`;
 }
 
 function searchCity(city) {
