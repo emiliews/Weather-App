@@ -49,6 +49,10 @@ function showWeather(response) {
     response.data.main.temp_min
   );
 
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.main.humidity
+  );
+
   document.querySelector("#day").innerHTML = formatDate(
     response.data.dt * 1000
   );
@@ -119,6 +123,9 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function getCurrentLocation(event) {
