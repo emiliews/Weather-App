@@ -54,6 +54,11 @@ div.card {
   max-width: 650px;
 }
 
+#weather-numbers {
+  font-size: 26px;
+  font-weight: 400;
+}
+
 .card-body {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   border-radius: 10px;
