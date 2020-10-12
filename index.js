@@ -76,6 +76,7 @@ function showWeather(response) {
 }
 
 function showForecast(response) {
+  document.querySelector("#city-header").innerHTML = response.data.name;
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
